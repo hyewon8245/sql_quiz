@@ -9,10 +9,11 @@
 ## 👥 팀원
 | 이름 | 역할 | GitHub |
 |------|------|--------|
-| 박지원 | 문제 1 출제 및 풀이 | <img src="https://github.com/bbo9866.png" width="30"/> |
-| 이기현 | 문제 2 출제 및 풀이 | <img src="https://github.com/GIHYUN-LEE.png" width="30"/> |
-| 임채준 | 문제 3 출제 및 풀이 | <img src="https://github.com/dlacowns21.png" width="30"/> |
-| 홍혜원 | 문제 4 출제 및 풀이 | <img src="https://github.com/hyewon8245.png" width="30"/> |
+| 박지원 | 문제 1 출제 및 풀이 | <p align="center"><img src="https://github.com/bbo9866.png" width="30"/><br/><a href="https://github.com/bbo9866">GitHub 주소</a></p> |
+| 이기현 | 문제 2 출제 및 풀이 | <p align="center"><img src="https://github.com/GIHYUN-LEE.png" width="30"/><br/><a href="https://github.com/GIHYUN-LEE">GitHub 주소</a></p> |
+| 임채준 | 문제 3 출제 및 풀이 | <p align="center"><img src="https://github.com/dlacowns21.png" width="30"/><br/><a href="https://github.com/dlacowns21">GitHub 주소</a></p> |
+| 홍혜원 | 문제 4 출제 및 풀이 | <p align="center"><img src="https://github.com/hyewon8245.png" width="30"/><br/><a href="https://github.com/hyewon8245">GitHub 주소</a></p> |
+
 
 ## ✍️ 진행 방식
 - 각자 실무 중심 SQL 문제를 1개 이상 설계
