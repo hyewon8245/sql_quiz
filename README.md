@@ -7,10 +7,12 @@
 **날짜 처리**, **문자열 조건**, **BETWEEN, LIKE, EXTRACT 등 함수의 차이점**에 주목하며 실습 중심으로 진행했습니다.
 
 ## 👥 팀원
-- 박지원
-- 임채준
-- 홍혜원
-- 이기현
+| 이름 | 역할 | GitHub |
+|------|------|--------|
+| 박지원 | 문제 1 출제 및 풀이 | <img src="https://github.com/bbo9866.png" width="30"/> |
+| 이기현 | 문제 2 출제 및 풀이 | <img src="https://github.com/GIHYUN-LEE.png" width="30"/> |
+| 임채준 | 문제 3 출제 및 풀이 | <img src="https://github.com/dlacowns21.png" width="30"/> |
+| 홍혜영 | 문제 4 출제 및 풀이 | <img src="https://github.com/hyewon8245.png" width="30"/> |
 
 ## ✍️ 진행 방식
 - 각자 실무 중심 SQL 문제를 1개 이상 설계
