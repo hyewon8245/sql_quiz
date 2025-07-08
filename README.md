@@ -32,3 +32,35 @@
 - Oracle은 **날짜 포맷 지정**이 필요, MySQL은 **함수 사용 간결**
 - `LIKE`, `BETWEEN`, `IN` 등 조건문 처리 방식 차이
 - 실무 데이터 쿼리 작성 시 DBMS별 문법 차이에 유의해야 함
+
+---
+
+## 🔧 풀이에 사용한 SQL 문법
+
+- `LIKE`, `NOT LIKE`: 문자열 포함 여부 판단
+- `BETWEEN A AND B`: 범위 조건
+- `ORDER BY`: 정렬 (오름차순 / 내림차순)
+- (공통)날짜 조건 조회 함수
+
+---
+
+## 🗂️ DBMS별 날짜 함수 정리
+
+### ✅ MySQL
+```sql
+YEAR(hiredate)     -- 연도 추출
+MONTH(hiredate)    -- 월 추출
+DAY(hiredate)      -- 일 추출
+```
+
+### ✅ Oracle
+```sql
+-- 날짜 → 문자열로 추출
+TO_CHAR(hiredate, 'YYYY')  -- 연도
+TO_CHAR(hiredate, 'MM')    -- 월
+TO_CHAR(hiredate, 'DD')    -- 일
+
+-- 문자열 → 날짜로 변환
+TO_DATE('20250708', 'YYYYMMDD')
+TO_DATE('2025-07-08', 'YYYY-MM-DD')
+```
