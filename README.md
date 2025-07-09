@@ -83,48 +83,48 @@ ORDER BY hiredate DESC;
 SELECT ename, hiredate  
 FROM emp
 
-## ✅ 2. 12월 입사 & 급여 2000 이상
-
-- **문제**: 12월에 입사한 사원 중 **급여가 2000 이상**인 사람의 이름, 입사일, 급여를 출력
+## ✅ 2. 12월 입사 & 급여 2000 이상  
+**문제**: 12월에 입사한 사원 중 급여가 2000 이상인 사람의 이름, 입사일, 급여를 출력  
 
 ```sql
--- MySQL
+-- MySQL  
 SELECT ename, hiredate, sal  
 FROM emp  
 WHERE MONTH(hiredate) = 12 AND sal >= 2000;
 
--- Oracle
+-- Oracle  
 SELECT ename, hiredate, sal  
 FROM emp  
 WHERE EXTRACT(MONTH FROM hiredate) = 12 AND sal >= 2000;
 
-## ✅ 3. 입사 월이 2월 & 부서번호 30
-- **문제**: 입사한 달이 **2월**이고 부서번호가 **30**인 사원들의 사번, 이름, 급여를 출력
+## ✅ 3. 입사 월이 2월 & 부서번호 30  
+**문제**: 입사한 달이 **2월**이고 부서번호가 **30**인 사원들의 사번, 이름, 급여를 출력  
 
 ```sql
--- MySQL
+-- MySQL  
 SELECT empno, ename, sal  
 FROM emp  
 WHERE MONTH(hiredate) = 2 AND deptno = 30;
 
--- Oracle
+-- Oracle  
 SELECT empno, ename, sal  
 FROM emp  
 WHERE EXTRACT(MONTH FROM hiredate) = 2 AND deptno = 30;
 
-## ✅ 4. 이름에 'A' 포함 & 입사연도 1981 또는 1987
-- **문제**: 이름에 **‘A’가 포함**되고 입사 연도가 **1981 또는 1987**인 사원들의 이름과 입사일을 출력
 
+## ✅ 4. 이름에 'A' 포함 & 입사연도 1981 또는 1987  
+**문제**: 이름에 **‘A’가 포함**되고 입사 연도가 **1981 또는 1987**인 사원들의 이름과 입사일을 출력  
 
 ```sql
--- MySQL
+-- MySQL  
 SELECT ename, hiredate  
 FROM emp  
 WHERE ename LIKE '%A%' AND YEAR(hiredate) IN (1981, 1987);
 
--- Oracle
+-- Oracle  
 SELECT ename, hiredate  
 FROM emp  
 WHERE ename LIKE '%A%' AND TO_CHAR(hiredate, 'YYYY') IN ('1981', '1987');
+
 
 
