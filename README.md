@@ -65,3 +65,26 @@ TO_CHAR(hiredate, 'DD')    -- 일
 TO_DATE('20250708', 'YYYYMMDD')
 TO_DATE('2025-07-08', 'YYYY-MM-DD')
 ```
+
+# 📌 SQL 문제 & MySQL vs Oracle 대표 쿼리 정리
+
+## ✅ 1. 1981년에 입사 & 이름에 'A' 없음
+
+- **문제**: 1981년에 입사한 사원들 중, 이름에 'A'가 없는 사원들의 이름과 입사일을 입사일 기준 **내림차순**으로 출력
+
+```sql
+-- MySQL
+SELECT ename, hiredate  
+FROM emp  
+WHERE YEAR(hiredate) = 1981 AND ename NOT LIKE '%A%'  
+ORDER BY hiredate DESC;
+
+-- Oracle
+SELECT ename, hiredate  
+FROM emp  
+WHERE TO_CHAR(hiredate, 'YYYY') = '1981' AND ename NOT LIKE '%A%'  
+ORDER BY hiredate DESC;
+
+
+
+
