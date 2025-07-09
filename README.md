@@ -137,8 +137,6 @@ FROM emp
 WHERE ename LIKE '%A%' AND TO_CHAR(hiredate, 'YYYY') IN ('1981', '1987');
 ```
 
-`````
-
 
 
 
