@@ -65,85 +65,6 @@ TO_CHAR(hiredate, 'DD')    -- 일
 TO_DATE('20250708', 'YYYYMMDD')
 TO_DATE('2025-07-08', 'YYYY-MM-DD')
 ```
-
-# 📌 SQL 문제 & MySQL vs Oracle 대표 쿼리 정리
-
-## ✅ 1. 1981년에 입사 & 이름에 'A' 없음
-
-- **문제**: 1981년에 입사한 사원들 중, 이름에 'A'가 없는 사원들의 이름과 입사일을 입사일 기준 **내림차순**으로 출력
-
-```sql
--- MySQL
-SELECT ename, hiredate  
-FROM emp  
-WHERE YEAR(hiredate) = 1981 AND ename NOT LIKE '%A%'  
-ORDER BY hiredate DESC;
-
--- Oracle
-SELECT ename, hiredate  
-FROM emp
-
-## ✅ 2. 12월 입사 & 급여 2000 이상  
-- **문제**: 12월에 입사한 사원 중 급여가 2000 이상인 사람의 이름, 입사일, 급여를 출력  
-
-```sql
--- MySQL  
-SELECT ename, hiredate, sal  
-FROM emp  
-WHERE MONTH(hiredate) = 12 AND sal >= 2000;
-
--- Oracle  
-SELECT ename, hiredate, sal  
-FROM emp  
-WHERE EXTRACT(MONTH FROM hiredate) = 12 AND sal >= 2000;
-
-## ✅ 3. 입사 월이 2월 & 부서번호 30  
-**문제**: 입사한 달이 **2월**이고 부서번호가 **30**인 사원들의 사번, 이름, 급여를 출력  
-
-```sql
--- MySQL  
-SELECT empno, ename, sal  
-FROM emp  
-WHERE MONTH(hiredate) = 2 AND deptno = 30;
-
--- Oracle  
-SELECT empno, ename, sal  
-FROM emp  
-WHERE EXTRACT(MONTH FROM hiredate) = 2 AND deptno = 30;
-
-
-## ✅ 4. 이름에 'A' 포함 & 입사연도 1981 또는 1987  
-**문제**: 이름에 **‘A’가 포함**되고 입사 연도가 **1981 또는 1987**인 사원들의 이름과 입사일을 출력  
-
-```sql
--- MySQL  
-SELECT ename, hiredate  
-FROM emp  
-WHERE ename LIKE '%A%' AND YEAR(hiredate) IN (1981, 1987);
-
--- Oracle  
-SELECT ename, hiredate  
-FROM emp  
-WHERE ename LIKE '%A%' AND TO_CHAR(hiredate, 'YYYY') IN ('1981', '1987');
-
-
-
-좋은 질문이에요! 지금 Markdown 코드에서 **렌더링이 깨지는 원인**은 다음과 같습니다:
-
----
-
-### ❌ 문제 요약:
-
-1. **코드 블록이 제대로 닫히지 않음**
-
-   * `1번 문제`의 Oracle 쿼리 끝에 `FROM emp`까지만 있고, 그 아래에 코드 블록 닫는 \`\`\` 가 **없음**.
-2. 이로 인해 **뒤의 모든 코드가 계속 같은 코드 블록 안**으로 인식되어 마크다운이 깨진 거예요.
-
----
-
-### ✅ 고친 버전 (정상 렌더링 되는 형태)
-
-````markdown
 ## ✅ 1. 1981년에 입사 & 이름에 'A' 없음
 
 - **문제**: 1981년에 입사한 사원들 중, 이름에 'A'가 없는 사원들의 이름과 입사일을 입사일 기준 **내림차순**으로 출력
@@ -220,12 +141,6 @@ WHERE ename LIKE '%A%' AND TO_CHAR(hiredate, 'YYYY') IN ('1981', '1987');
 
 ---
 
-### 💡 핵심 정리
-
-- 쿼리 끝나면 **항상 `\`\`\`` 닫기**
-- Markdown에서 제목(`##`)이나 목록(`-`)과 코드 블록(````sql```) 사이에 **한 줄 이상 공백** 유지하면 더 안전합니다
-
-필요하시면 `.md` 파일로도 드릴게요!
 `````
 
 
