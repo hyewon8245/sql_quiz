@@ -67,8 +67,6 @@ TO_DATE('2025-07제
 ## ✅ 1. 1981년에 입사 & 이름에 'A' 없음
 
 
----
-
 - **문제**: 1981년에 입사한 사원들 중, 이름에 'A'가 없는 사원들의 이름과 입사일을 입사일 기준 **내림차순**으로 출력
 
 ```sql
@@ -83,7 +81,7 @@ SELECT ename, hiredate
 FROM emp  
 WHERE TO_CHAR(hiredate, 'YYYY') = '1981' AND ename NOT LIKE '%A%'  
 ORDER BY hiredate DESC;
-````
+```
 
 ---
 
